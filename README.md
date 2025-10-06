@@ -9,7 +9,7 @@
 
 proyecto-servicios/      ← 📁 Workspace general (no es CAP)<br />
  ├── gateway/            ← 📦 Proyecto CAP 1 (API Gateway)<br />
- ├── users-service/      ← 📦 Proyecto CAP 2 (Usuarios)<br />
- ├── errors-service/     ← 📦 Proyecto CAP 3 (Errores)<br />
+ ├── servicio-estrategias-inversion/      ← 📦 Proyecto CAP 2 (Usuarios)<br />
+ ├── servicio-errores/     ← 📦 Proyecto CAP 3 (Errores)<br />
  ├── docker-compose.yml  ← 🧰 Orquestador<br />
  └── README.md<br />
