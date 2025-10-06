@@ -7,9 +7,9 @@
 
 # Proximamente se implementará orquestador (docker compose)
 
-proyecto-servicios/                     ← 📁 Workspace general (no es CAP)
- ├── gateway/            ← 📦 Proyecto CAP 1 (API Gateway)
- ├── users-service/      ← 📦 Proyecto CAP 2 (Usuarios)
- ├── errors-service/     ← 📦 Proyecto CAP 3 (Errores)
- ├── docker-compose.yml  ← 🧰 Orquestador
- └── README.md
+proyecto-servicios/      ← 📁 Workspace general (no es CAP)<br />
+ ├── gateway/            ← 📦 Proyecto CAP 1 (API Gateway)<br />
+ ├── users-service/      ← 📦 Proyecto CAP 2 (Usuarios)<br />
+ ├── errors-service/     ← 📦 Proyecto CAP 3 (Errores)<br />
+ ├── docker-compose.yml  ← 🧰 Orquestador<br />
+ └── README.md<br />
