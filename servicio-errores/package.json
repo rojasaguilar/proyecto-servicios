@@ -9,11 +9,19 @@
     "express": "^4",
     "mongoose": "^8.19.1"
   },
+  "type": "module",
   "devDependencies": {
     "@cap-js/sqlite": "^2"
   },
   "scripts": {
     "start": "cds-serve"
   },
-  "private": true
+  "private": true,
+  "files": ["srv"],
+  "cds": {
+    "folders": {
+      "db": "srv/api/models",
+      "srv": "srv/api/routes"
+    }
+  }
 }

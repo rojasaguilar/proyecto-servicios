@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const zterrorlogSchema = new mongoose.Schema(
   {
@@ -33,8 +33,8 @@ const zterrorlogSchema = new mongoose.Schema(
     },
     STATUS: {
       type: String,
-      enum: ["NEW", "IN_PROGRESS", "RESOLVED", "IGNORED"],
-      default: "NEW",
+      enum: ['NEW', 'IN_PROGRESS', 'RESOLVED', 'IGNORED'],
+      default: 'NEW',
     },
     CONTEXT: {
       type: mongoose.Schema.Types.Mixed,
@@ -42,7 +42,7 @@ const zterrorlogSchema = new mongoose.Schema(
     },
     SEVERITY: {
       type: String,
-      enum: ["INFO", "WARNING", "ERROR", "CRITICAL"],
+      enum: ['INFO', 'WARNING', 'ERROR', 'CRITICAL'],
     },
     MODULE: {
       type: String,
@@ -59,7 +59,7 @@ const zterrorlogSchema = new mongoose.Schema(
     //Pagina de la app donde surgió el error
     // En que proceso ucurrió
   },
-  { collection: "ZTERRORLOG" }
+  { collection: 'ZTERRORLOG' }
 );
 
-export default mongoose.model("ZTERRORLOG", zterrorlogSchema);
+export default mongoose.model('ZTERRORLOG', zterrorlogSchema);

@@ -1,0 +1,15 @@
+using {err.sch as err} from '../models/schema-zterrorlog';
+
+@impl: 'srv/api/controllers/zterrorlog-controller.js'
+
+service ZterrorLogServiceRoute @(path: 'api/error') {
+    entity ErrSrv as projection on err.zterrorlog;
+
+    @Core.Description: 'get-all-errors'
+    @path            : 'getall'
+    function getall()              returns array of ErrSrv;
+
+    @Core.Description: 'addOne-error'
+    @path            : 'addOne'
+    action   addOne(error: ErrSrv) returns array of ErrSrv;
+}
