@@ -16,11 +16,7 @@
   "cds": {
     "folders": {
       "db":  "src/api/models",
-      "srv": "src/api/routes",
-      "app": "app"
+      "srv": "src/api/routes"
     }
-  },
-  "requires": {
-    "db": false
   }
 }
