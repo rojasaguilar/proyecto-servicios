@@ -1,10 +1,10 @@
-import express, {Router} from 'express';
+import express, { Router } from 'express';
 import cds from '@sap/cds';
 import cors from 'cors';
 import { connectDB } from './srv/config/connectToMongo.js';
 
-
 export default async (o) => {
+  const router = Router();
   try {
     connectDB();
     let app = express();
@@ -12,7 +12,7 @@ export default async (o) => {
 
     app.use(express.json({ limit: '500kb' }));
     app.use(cors());
-    app.use('/api', Router);
+    app.use('/api', router);
 
     o.app = app;
 
@@ -21,6 +21,6 @@ export default async (o) => {
     return o.app.httpServer;
   } catch (err) {
     console.error(err);
-    process.exit(1)
+    process.exit(1);
   }
 };

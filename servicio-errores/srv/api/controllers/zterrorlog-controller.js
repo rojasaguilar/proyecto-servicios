@@ -7,6 +7,11 @@ class ErrorClass extends cds.ApplicationService {
       return zterrorlogService.GetAllErrors();
     });
 
+    // this.on('READ','ErrSrv', async (req) => {
+    //   console.log("e")
+    //   return 1;
+    // });
+
     this.on('addOne', async (req) => {
       const newError = req.data.error;
       const result = await zterrorlogService.InsertOneError(newError);
@@ -14,6 +19,16 @@ class ErrorClass extends cds.ApplicationService {
         req._.res.statusCode = 201;
       }
       return result;
+    });
+
+    this.on('deleteOne', async (req) => {
+      const { _id } = req.data.error;
+      return await zterrorlogService.DeleteOneError(_id);
+    });
+
+    this.on('updateOne', async (req) => {
+      const { _id } = req.data.error;
+      return await zterrorlogService.UpdateOneError(_id);
     });
   }
 }
